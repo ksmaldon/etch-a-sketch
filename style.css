@@ -10,4 +10,23 @@ height: 100%;
 
 body{
 height: 100%;
+padding: 10px;
+}
+
+
+.grid-container{
+    display: grid;
+    width:500px;
+    height: 500px;
+    gap:1px;
+    padding: 1px;
+    background-color: lightgrey;
+    
+
+}
+
+.square{
+    background-color: white;
+    margin: 0;
+    
 }
