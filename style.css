@@ -14,22 +14,25 @@ padding: 10px;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
+justify-content: flex-start;
 background: powderblue
 }
 
 /*---NAV BAR---*/
 nav{
-    /* width:500px;
-    height: 80px;
-    border: 2px solid black; */
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
+h1{
+    margin-top: 50px;
+}
 .buttons{
     
     display: flex;
     gap: 20px;
-    width: 600px;
+    width: 300px;
     display: flex;
     justify-content: space-around;
 }
@@ -66,8 +69,8 @@ nav{
 /*---GRID---*/
 .grid-container{
     display: grid;
-    width:600px;
-    height: 600px;
+    width:300px;
+    height: 300px;
     /*gap:1px;*/
     /*padding: 1px;*/ 
     /*background-color: grey;*/ 

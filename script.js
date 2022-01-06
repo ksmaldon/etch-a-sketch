@@ -24,6 +24,7 @@ function makeGrid(value){
         let square = document.createElement("div");
         gridContainer_div.appendChild(square).classList.add("square");
         square.addEventListener('mouseover',()=>colorChange(square));
+        
     }
     gridContainer_div.style.gridTemplateColumns = `repeat(${value},1fr)`; 
     gridContainer_div.style. gridTemplateRows = `repeat(${value},1fr)`;
@@ -55,19 +56,6 @@ function reset(){
 
 
 //BUTTONS
-
-
-//size_button.addEventListener('click', ()=>{
-    //gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
-    //rainbowIsPressed =false;
-    //blackIsPressed = true;
-   //let userInput = prompt("Enter a number between 1-100");
-    //if (userInput > 100|| userInput<1){
-     //  prompt("Try again!") 
-    //}else{
-     //  makeGrid(userInput)
-    //} 
-//});
 
 ten_button.addEventListener('click',()=>{
     gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
