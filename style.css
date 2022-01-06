@@ -61,6 +61,8 @@ h1{
     width: 60px;
     border-radius: 30px;
     border-style: none;
+    border: 2px solid black;
+    background: white;
 }
 
 #reset{
