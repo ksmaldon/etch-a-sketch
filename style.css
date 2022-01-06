@@ -11,26 +11,39 @@ height: 100%;
 body{
 height: 100%;
 padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
 }
 
+/*---NAV BAR---*/
+/*nav{
+    /* width:500px;
+    height: 80px;
+    border: 2px solid black; */
+/*}*/
 
+
+
+
+/*---GRID---*/
 .grid-container{
     display: grid;
     width:500px;
     height: 500px;
-    gap:1px;
-    padding: 1px;
-    background-color: grey;
-    
-
+    /*gap:1px;*/
+    /*padding: 1px;*/ 
+    /*background-color: grey;*/ 
 }
 
 .square{
     background-color: white;
-    margin: 0;
-    
+    border:2px solid black;
+    /*margin: 0;*/
 }
 
 .color-change{
     background-color: black;
-}
+} 
+
