@@ -5,9 +5,10 @@ const reset_button = document.getElementById("reset");
 
 
 function makeGrid(value){
+    
     for(let i=0; i<(value*value); i++){
         let square = document.createElement("div");
-        gridContainer_div.appendChild(square).classList.add("square", i);
+        gridContainer_div.appendChild(square).classList.add("square");
         square.addEventListener('mouseover',()=>colorChange(square));
         reset_button.addEventListener('click', ()=>resetGrid(square));
     }
@@ -15,6 +16,7 @@ function makeGrid(value){
     gridContainer_div.style. gridTemplateRows = `repeat(${value},1fr)`;
 }  
     
+makeGrid(16);
 
 
 function colorChange(square){
@@ -28,6 +30,7 @@ function resetGrid(square){
 
 
 size_button.addEventListener('click', ()=>{
+    gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
    let userInput = prompt("Enter a number between 1-100");
     if (userInput > 100|| userInput<1){
        prompt("Try again!") 
@@ -37,7 +40,7 @@ size_button.addEventListener('click', ()=>{
 });
 
 
-window.onload(makeGrid(16));
+//window.onload(makeGrid(16));
 
 
 
