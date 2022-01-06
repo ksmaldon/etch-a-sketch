@@ -4,12 +4,17 @@ const size_button = document.getElementById("size");
 const reset_button = document.getElementById("reset");
 const rainbow_button = document.getElementById("rainbow");
 const black_button = document.getElementById("black");
+const ten_button = document.getElementById("ten");
+const thirty_button = document.getElementById("thirty");
+const forty_button = document.getElementById("forty");
+const sixty_button = document.getElementById("sixty");
 
 
-//VARIABLES
+//VARIABLES   
 let rainbowIsPressed = false;
 let blackIsPressed = false;
 let greyIsPressed = false;
+let value;
 
 //FUNCTIONS
 makeGrid(16);
@@ -24,8 +29,6 @@ function makeGrid(value){
     gridContainer_div.style. gridTemplateRows = `repeat(${value},1fr)`;
 }  
     
-
-
 
 function colorChange(square){
     if(blackIsPressed===true){
@@ -43,34 +46,78 @@ function colorChange(square){
     }
 
 }
+
+
+function reset(){
+    gridContainer_div.querySelectorAll('.square').forEach(el => el.style.removeProperty("background"));
+}
+
+
+
 //BUTTONS
-size_button.addEventListener('click', ()=>{
+
+
+//size_button.addEventListener('click', ()=>{
+    //gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
+    //rainbowIsPressed =false;
+    //blackIsPressed = true;
+   //let userInput = prompt("Enter a number between 1-100");
+    //if (userInput > 100|| userInput<1){
+     //  prompt("Try again!") 
+    //}else{
+     //  makeGrid(userInput)
+    //} 
+//});
+
+ten_button.addEventListener('click',()=>{
     gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
     rainbowIsPressed =false;
     blackIsPressed = true;
-   let userInput = prompt("Enter a number between 1-100");
-    if (userInput > 100|| userInput<1){
-       prompt("Try again!") 
-    }else{
-       makeGrid(userInput)
-    } 
-});
+    makeGrid(10);
+})
+
+
+
+
+thirty_button.addEventListener('click',()=>{
+    gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
+    rainbowIsPressed =false;
+    blackIsPressed = true;
+    makeGrid(20);
+})
+
+
+
+forty_button.addEventListener('click',()=>{
+    gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
+    rainbowIsPressed =false;
+    blackIsPressed = true;
+    makeGrid(40);
+})
+
+sixty_button.addEventListener('click', ()=>{
+    gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
+    rainbowIsPressed =false;
+    blackIsPressed = true;
+    makeGrid(60); 
+})
 
 reset_button.addEventListener('click', ()=>{
-    gridContainer_div.querySelectorAll('.square').forEach(el => el.classList.remove("color-change"));
+    reset();
 })
 
 
 rainbow_button.addEventListener('click', ()=>{
     rainbowIsPressed =true;
     blackIsPressed = false;
+    reset()
 })
 
 black_button.addEventListener('click', ()=>{
     rainbowIsPressed =false;
     blackIsPressed = true;
+    reset()
 })
-
 
 
 
