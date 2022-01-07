@@ -7,7 +7,9 @@
 html{
 height: 100%;
 width: 100%;
-margin:0%
+margin:0%;
+position: relative;
+overflow: hidden;
 }
 
 
@@ -28,18 +30,22 @@ background: linear-gradient(45deg,#e66465, #FFCBA4);
 nav{
     padding: 20px;
     margin-top: 30px;
-    margin-bottom: 30px;
-    width:100%
+    margin-bottom: 10px;
+    width:100%;
 }
 
 h1{
     margin-top: 50px;
     color: white;
+    text-shadow: 2px 2px #e66465;
     
 }
 
 p{
     color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-shadow: 1px 2px #e66465;
 }
 .buttons{
     
@@ -75,6 +81,7 @@ p{
     border-style: none;
     border: 2px solid white;
     background: transparent;
+    color: black;
 }
 
 #reset{
@@ -87,6 +94,7 @@ p{
     width:300px;
     height: 300px;
     margin-bottom: 80px;
+    box-shadow: 5px 10px;
     /*gap:1px;*/
     /*padding: 1px;*/ 
     /*background-color: grey;*/ 
