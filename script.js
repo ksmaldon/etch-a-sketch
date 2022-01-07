@@ -12,7 +12,7 @@ const mode_p = document.getElementById("mode");
 
 //VARIABLES   
 let rainbowIsPressed = false;
-let blackIsPressed = false;
+let blackIsPressed = true;
 let greyIsPressed = false;
 let value;
 
