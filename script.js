@@ -5,10 +5,10 @@ const reset_button = document.getElementById("reset");
 const rainbow_button = document.getElementById("rainbow");
 const black_button = document.getElementById("black");
 const ten_button = document.getElementById("ten");
+const twenty_button = document.getElementById("twenty");
 const thirty_button = document.getElementById("thirty");
 const forty_button = document.getElementById("forty");
-const sixty_button = document.getElementById("sixty");
-
+const mode_p = document.getElementById("mode");
 
 //VARIABLES   
 let rainbowIsPressed = false;
@@ -53,7 +53,11 @@ function reset(){
     gridContainer_div.querySelectorAll('.square').forEach(el => el.style.removeProperty("background"));
 }
 
-
+function removeButtonStyle(){
+    document.querySelectorAll(".button").forEach(el => el.style.removeProperty("background"));
+    document.querySelectorAll(".button").forEach(el => el.style.removeProperty("color"))
+    
+}
 
 //BUTTONS
 
@@ -61,9 +65,22 @@ ten_button.addEventListener('click',()=>{
     gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
     rainbowIsPressed =false;
     blackIsPressed = true;
+    removeButtonStyle();
+    ten_button.style.cssText='color:white; background:#e66465;';
     makeGrid(10);
 })
 
+
+
+
+twenty_button.addEventListener('click',()=>{
+    gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
+    rainbowIsPressed =false;
+    blackIsPressed = true;
+    removeButtonStyle();
+    twenty_button.style.cssText='color:white; background:#e66465';
+    makeGrid(20);
+})
 
 
 
@@ -71,23 +88,18 @@ thirty_button.addEventListener('click',()=>{
     gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
     rainbowIsPressed =false;
     blackIsPressed = true;
-    makeGrid(20);
+    removeButtonStyle();
+    thirty_button.style.cssText='color:white; background:#e66465';
+    makeGrid(30);
 })
 
-
-
-forty_button.addEventListener('click',()=>{
+forty_button.addEventListener('click', ()=>{
     gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
     rainbowIsPressed =false;
     blackIsPressed = true;
-    makeGrid(40);
-})
-
-sixty_button.addEventListener('click', ()=>{
-    gridContainer_div.querySelectorAll('.square').forEach(el => el.remove());
-    rainbowIsPressed =false;
-    blackIsPressed = true;
-    makeGrid(60); 
+    removeButtonStyle();
+    forty_button.style.cssText='color:white; background:#e66465';
+    makeGrid(40); 
 })
 
 reset_button.addEventListener('click', ()=>{
@@ -99,12 +111,14 @@ rainbow_button.addEventListener('click', ()=>{
     rainbowIsPressed =true;
     blackIsPressed = false;
     reset()
+   console.log(mode_p.textContent=`Mode:${"Rainbow"}`); 
 })
 
 black_button.addEventListener('click', ()=>{
     rainbowIsPressed =false;
     blackIsPressed = true;
     reset()
+    mode_p.textContent=`Mode:${"Black"}`;
 })
 
 
