@@ -24,7 +24,6 @@ function makeGrid(value){
         let square = document.createElement("div");
         gridContainer_div.appendChild(square).classList.add("square");
         square.addEventListener('mouseover',()=>colorChange(square));
-        
     }
     gridContainer_div.style.gridTemplateColumns = `repeat(${value},1fr)`; 
     gridContainer_div.style. gridTemplateRows = `repeat(${value},1fr)`;
@@ -111,14 +110,14 @@ rainbow_button.addEventListener('click', ()=>{
     rainbowIsPressed =true;
     blackIsPressed = false;
     reset()
-   console.log(mode_p.textContent=`Mode:${"Rainbow"}`); 
+   console.log(mode_p.textContent=`Mode: ${"Rainbow"}`); 
 })
 
 black_button.addEventListener('click', ()=>{
     rainbowIsPressed =false;
     blackIsPressed = true;
     reset()
-    mode_p.textContent=`Mode:${"Black"}`;
+    mode_p.textContent=`Mode: ${"Black"}`;
 })
 
 
