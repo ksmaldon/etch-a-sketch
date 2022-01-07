@@ -7,9 +7,6 @@
 html{
 height: 100%;
 width: 100%;
-margin:0%;
-position: relative;
-overflow: hidden;
 }
 
 
@@ -28,14 +25,14 @@ background: linear-gradient(45deg,#e66465, #FFCBA4);
 
 /*---NAV BAR---*/
 nav{
-    padding: 20px;
+    
     margin-top: 30px;
     margin-bottom: 10px;
-    width:100%;
+    
 }
 
 h1{
-    margin-top: 50px;
+    margin-top: 20px;
     color: white;
     text-shadow: 2px 2px #e66465;
     
@@ -45,11 +42,14 @@ p{
     color: white;
     font-size: 25px;
     margin-bottom: 10px;
+    margin-top: 10px;
     text-shadow: 1px 2px #e66465;
 }
 .buttons{
     
     display: flex;
+    margin-top:10px;
+    margin-bottom: 10px;
     gap: 20px;
     width: 350px;
     display: flex;
@@ -65,6 +65,7 @@ p{
 .center{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap:10px;
 }
 
@@ -109,8 +110,8 @@ p{
 
 footer{
    justify-content: center;
-   padding: 5px;
    color: white;
+   
 }
 
 footer a{
